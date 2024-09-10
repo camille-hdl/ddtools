@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "public/index.html",
   "scripts": {
-    "build": "run-s buildrollup workbox",
-    "build:dev": "run-s buildrollup:dev workbox",
+    "build": "npm-run-all buildrollup workbox",
+    "build:dev": "npm-run-all buildrollup:dev workbox",
     "buildrollup": "rollup -c --prod --mini",
     "buildrollup:dev": "rollup -c",
     "workbox": "workbox injectManifest workbox-config-esm.js",

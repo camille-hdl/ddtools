@@ -1,0 +1,45 @@
+# Build
+public/js/esm/
+public/js/system/
+public/js/vendor/
+public/js/*.js
+
+jest-coverage
+.nyc_output
+coverage
+cypress-coverage/
+cypress/videos
+cypress/screenshots
+reports
+
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.tmp
+*~$*.docx
+
+
+# Mac
+.DS_Store
+._*
+
+
+# Editeurs
+_notes/
+**/_notes*/
+dwsync.xml
+*.sublime-project
+*.sublime-workspace
+.idea/
+*.bak
+oracle.sqlite
+.vscode/
+
+
+# NodeJS
+node_modules/
+npm-debug.log
+flow-typed/

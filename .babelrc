@@ -1,0 +1,43 @@
+{
+    "env": {
+      "production": {
+        "presets": [["@babel/preset-modules", {
+          "loose": true,
+        }],  "@babel/preset-react", "@babel/preset-flow"],
+        "plugins": [
+          "@babel/plugin-syntax-dynamic-import",
+          "@babel/plugin-proposal-class-properties",
+          "@babel/plugin-proposal-optional-chaining",
+          "@babel/plugin-proposal-nullish-coalescing-operator",
+          ["transform-imports", {
+            "lodash": {
+                "transform": "lodash/${member}",
+                "preventFullImport": true
+            }
+          }]
+        ]
+      },
+      "development": {
+        "presets": [["@babel/preset-modules", {
+          "loose": true,
+        }],  "@babel/preset-react", "@babel/preset-flow"],
+        "plugins": [
+          "@babel/plugin-syntax-dynamic-import",
+          "@babel/plugin-proposal-class-properties",
+          "@babel/plugin-proposal-optional-chaining",
+          "@babel/plugin-proposal-nullish-coalescing-operator",
+          "istanbul",
+          ["transform-imports", {
+            "lodash": {
+                "transform": "lodash/${member}",
+                "preventFullImport": true
+            }
+          }]
+        ]
+      },
+      "test": {
+        "presets": ["@babel/preset-env",  "@babel/preset-react", "@babel/preset-flow"],
+        "plugins": ["@babel/plugin-proposal-class-properties", "@babel/plugin-proposal-nullish-coalescing-operator", "@babel/plugin-proposal-optional-chaining"]
+      }
+    }
+  }

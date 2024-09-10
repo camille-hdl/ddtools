@@ -10,6 +10,149 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
         <meta name="theme-color" content="#3f51b5">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+            }
+            #app-container {
+                height: 100%;
+                width: 100%;
+            }
+            .tabularium {
+                font-family: "Garamond", serif;
+                text-align: center;
+                background-image: url("images/marble.jpg");
+                background-blend-mode: color-burn;
+                background-repeat: repeat;
+                height: 100%;
+            }
+            .encodedText {
+                font-size: 4em;
+            }
+            .archive-grid {
+                margin: auto;
+                display: inline-block;
+            }
+            .grid-container {
+                text-align: center;
+            }
+
+            input[type=range] {
+                height: 39px;
+                -webkit-appearance: none;
+                margin: 10px 0;
+                width: 100%;
+            }
+            input[type=range]:focus {
+                outline: none;
+            }
+            input[type=range]::-webkit-slider-thumb {
+                box-shadow: 1px 1px 2px #A6A6A6;
+                border: 2px solid #F27B7F;
+                height: 30px;
+                width: 30px;
+                border-radius: 0px;
+                background: #FF96AB;
+                cursor: pointer;
+                -webkit-appearance: none;
+                margin-top: -11px;
+            }
+            input[type=range]::-moz-range-thumb {
+                box-shadow: 1px 1px 2px #A6A6A6;
+                border: 2px solid #F27B7F;
+                height: 30px;
+                width: 30px;
+                border-radius: 0px;
+                background: #FF96AB;
+                cursor: pointer;
+            }
+            input[type=range]::-ms-thumb {
+                margin-top: 1px;
+                box-shadow: 1px 1px 2px #A6A6A6;
+                border: 2px solid #F27B7F;
+                height: 30px;
+                width: 30px;
+                border-radius: 0px;
+                background: #FF96AB;
+                cursor: pointer;
+            }
+            input[type=range].slider-green {
+                background: #96FFAB;
+            }
+            input[type=range].slider-green::-webkit-slider-thumb {
+                box-shadow: 1px 1px 2px #96FFAB;
+                border: 2px solid #075a18;
+                background: #5fc975;
+            }
+            input[type=range].slider-green::-moz-range-thumb {
+                box-shadow: 1px 1px 2px #96FFAB;
+                border: 2px solid #075a18;
+                background: #5fc975;
+            }
+            input[type=range].slider-green::-ms-thumb {
+                box-shadow: 1px 1px 2px #96FFAB;
+                border: 2px solid #075a18;
+                background: #5fc975;
+            }
+            input[type=range].slider-red {
+                background: #ff9696;
+            }
+            input[type=range].slider-red::-webkit-slider-thumb {
+                box-shadow: 1px 1px 2px #ff9696;
+                border: 2px solid #5a0707;
+                background: #c95f5f;
+            }
+            input[type=range].slider-red::-moz-range-thumb {
+                box-shadow: 1px 1px 2px #ff9696;
+                border: 2px solid #5a0707;
+                background: #c95f5f;
+            }
+            input[type=range].slider-red::-ms-thumb {
+                box-shadow: 1px 1px 2px #ff9696;
+                border: 2px solid #5a0707;
+                background: #c95f5f;
+            }
+            input[type=range].slider-blue {
+                background: #96c2ff;
+            }
+            input[type=range].slider-blue::-webkit-slider-thumb {
+                box-shadow: 1px 1px 2px #96c2ff;
+                border: 2px solid #051c85;
+                background: #5f66c9;
+            }
+            input[type=range].slider-blue::-moz-range-thumb {
+                box-shadow: 1px 1px 2px #96c2ff;
+                border: 2px solid #051c85;
+                background: #5f66c9;
+            }
+            input[type=range].slider-blue::-ms-thumb {
+                box-shadow: 1px 1px 2px #96c2ff;
+                border: 2px solid #051c85;
+                background: #5f66c9;
+            }
+            input[type=range].slider-blur {
+                background: linear-gradient(#e66465, #9198e5);
+            }
+            input[type=range].slider-blur::-webkit-slider-thumb {
+                box-shadow: 1px 1px 2px #7eecec;
+                border: 2px solid #a24ee7;
+                background: linear-gradient(#e66465, #9198e5);
+            }
+            input[type=range].slider-blur::-moz-range-thumb {
+                box-shadow: 1px 1px 2px #7eecec;
+                border: 2px solid #a24ee7;
+                background: linear-gradient(#e66465, #9198e5);
+            }
+            input[type=range].slider-blur::-ms-thumb {
+                box-shadow: 1px 1px 2px #7eecec;
+                border: 2px solid #a24ee7;
+                background: linear-gradient(#e66465, #9198e5);
+            }
+
+        </style>
     </head>
     <body>
         <script type="module">
